@@ -86,7 +86,7 @@ install_via_pipx() {
 	export PIP_CACHE_DIR=/tmp/pip-tmp/cache
 
 	export PIPX_HOME=${PIPX_HOME:-"/usr/local/py-utils"}
-	export PIPX_BIN_DIR="${PIPX_HOME}/bin"
+	export PIPX_BIN_DIR="${PIPX_BIN_DIR:-${PIPX_HOME}/bin}"
 	mkdir -p "${PIPX_HOME}"
 
 	_install_pipx() {
